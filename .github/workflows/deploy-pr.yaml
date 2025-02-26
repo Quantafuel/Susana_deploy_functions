@@ -8,6 +8,7 @@ jobs:
     strategy:
       matrix:
         function:
+          - accumulated_infeed_per_supplier
 
     steps:
       - uses: actions/checkout@v2
