@@ -84,7 +84,7 @@ jobs:
           #deployment_tenant_id: 92bce3bb-abfb-484b-b074-32e1a37f3631
           schedules_client_id: ${{ secrets.SCHEDULES_CLIENT_ID }}
           cdf_cluster: api
-          cdf_project: quanta-dev
+          cdf_project: susana
           runtime: py39
           await_deployment_success: true  # set to false to skip waiting for deployments entirely
 
