@@ -8,7 +8,7 @@ jobs:
     strategy:
       matrix:
         function:
-          - Esbjerg_production_running_hours
+          - Esbjerg_line_status
 
     steps:
       - uses: actions/checkout@v4
