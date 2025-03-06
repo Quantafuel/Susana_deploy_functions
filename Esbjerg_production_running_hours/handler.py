@@ -7,6 +7,20 @@ Created on Thu Mar  6 14:12:07 2025
 
 
 def handle(client):
+    """
+
+
+    Parameters
+    ----------
+    client : TYPE
+        DESCRIPTION.
+
+    Returns
+    -------
+    df : TYPE
+        Returns the running time of line 1 and 2 since last existing datapoint in CDF.
+
+    """
     from datetime import datetime
     from zoneinfo import ZoneInfo
 
