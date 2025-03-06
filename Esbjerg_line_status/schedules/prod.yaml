@@ -1,2 +1,2 @@
-- name: Running hour schedule
-  cron: "*/10 * * * *"
+- name: Line status schedule
+  cron: "* * * * *"
