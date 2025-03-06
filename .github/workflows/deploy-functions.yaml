@@ -8,7 +8,7 @@ jobs:
   generate-matrix:
     uses: "./.github/workflows/generate-matrix.yaml"
     with:
-      deploy_folders: "accumulated_infeed_per_supplier"
+      deploy_folders: "Esbjerg_production_running_hours"
       trigger_deploy_all_folders: "common"
 
   deploy:
