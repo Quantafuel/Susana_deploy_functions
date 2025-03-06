@@ -8,14 +8,14 @@ jobs:
     strategy:
       matrix:
         function:
-          - accumulated_infeed_per_supplier
+          - Esbjerg_production_running_hours
 
     steps:
       - uses: actions/checkout@v2
 
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.9'
+          python-version: '3.10'
 
       - name: Load cached $HOME/.local
         uses: actions/cache@v2
