@@ -5,16 +5,25 @@ def handle(client):
 
     import pandas as pd
 
+    latest_dp_1 = client.time_series.data.retrieve_latest(external_id="line1_status")
+    latest_dp_2 = client.time_series.data.retrieve_latest(external_id="line2_status")
+
     dps1 = client.time_series.data.retrieve_dataframe(
         external_id='EAB:s="F110-M1_IW3_Strom"',
-        start=datetime(2024, 3, 13, timezone=ZoneInfo("Europe/Oslo")),
+        start=latest_dp_1.timestamp[0],
         end=datetime.now(tz=ZoneInfo("Europe/Oslo")),
+        aggregates="average",
+        granularity="1m",
+        include_aggregate_name=False,
     )
 
     dps2 = client.time_series.data.retrieve_dataframe(
         external_id='EAB:s="F410-M1_IW3_Strom"',
-        start=datetime(2024, 3, 13, timezone=ZoneInfo("Europe/Oslo")),
+        start=latest_dp_2.timestamp[0],
         end=datetime.now(tz=ZoneInfo("Europe/Oslo")),
+        aggregates="average",
+        granularity="1m",
+        include_aggregate_name=False,
     )
 
     def status(value):
